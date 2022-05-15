@@ -38,3 +38,7 @@ r_dir_file(system_app, sysfs_battery_supply)
 
 # Zram
 r_dir_file(system_app, sysfs_zram)
+
+# Xiaomi Parts
+allow system_app sysfs_thermal:file rw_file_perms;
+
