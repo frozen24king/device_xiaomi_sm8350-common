@@ -30,5 +30,8 @@ allowxperm system_app apk_data_file:file ioctl {
   INCFS_IOCTL_GET_FILLED_BLOCKS
 };
 
+# Battery Health
+r_dir_file(system_app, sysfs_battery_supply)
+
 # Zram
 r_dir_file(system_app, sysfs_zram)
