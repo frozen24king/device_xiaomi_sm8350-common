@@ -33,6 +33,9 @@ allowxperm system_app apk_data_file:file ioctl {
   INCFS_IOCTL_GET_BLOCK_COUNT
   INCFS_IOCTL_GET_FILLED_BLOCKS
 };
+# To allow Settings to find and bind Google Battery HAL
+allow system_app hal_googlebattery_service:service_manager find;
+binder_call(system_app, hal_googlebattery)
 
 # Zram
 r_dir_file(system_app, sysfs_zram)
