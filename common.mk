@@ -95,6 +95,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     audio.bluetooth.default \
     libldacBT_abr \
+    libldacBT_bco \
     libldacBT_enc
 
 PRODUCT_PACKAGES += \
