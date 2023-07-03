@@ -7,6 +7,7 @@ binder_call(system_app, hal_gnss_default)
 binder_call(system_app, hal_power_default)
 binder_call(system_app, hal_vibrator_default)
 binder_call(system_app, hal_wifi_supplicant_default)
+binder_call(system_app, hal_lineage_health_default)
 
 # Allow system app to find services 
 dontaudit system_app system_suspend_control_service:service_manager find;
