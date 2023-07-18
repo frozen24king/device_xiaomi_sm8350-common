@@ -16,6 +16,6 @@
 -->
 <resources>
     <!-- Pocket Lock -->
-    <bool name="config_pocketModeSupported">false</bool>
-    <bool name="config_pocketUseLightSensor">false</bool>
+    <bool name="config_pocketModeSupported">true</bool>
+    <bool name="config_pocketUseLightSensor">true</bool>
 </resources>
