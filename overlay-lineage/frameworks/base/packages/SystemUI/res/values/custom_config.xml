@@ -29,4 +29,10 @@
 
     <!-- FPSInfoService Fps file path -->
     <string name="config_fpsInfoSysNode" translatable="false">/sys/class/drm/card0/sde-crtc-0/measured_fps</string>
+
+     <!-- SystemUI flags -->
+    <bool name="flag_combined_qs_headers">true</bool>
+    <bool name="flag_umo_surface_ripple">true</bool>
+    <bool name="flag_umo_turbulence_noise">true</bool>
+    
 </resources>
