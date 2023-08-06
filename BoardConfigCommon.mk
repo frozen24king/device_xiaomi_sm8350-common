@@ -212,3 +212,5 @@ WPA_SUPPLICANT_VERSION := VER_0_8_X
 
 # Inherit proprietary blobs
 include vendor/xiaomi/sm8350-common/BoardConfigVendor.mk
+
+TARGET_USE_OLD_RMNET_DATA := true
