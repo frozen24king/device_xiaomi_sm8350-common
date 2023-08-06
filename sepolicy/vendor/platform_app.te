@@ -52,3 +52,9 @@ allowxperm platform_app apk_data_file:file ioctl {
 
 # Zram
 r_dir_file(platform_app, sysfs_zram)
+
+# System Info
+allow platform_app vendor_sysfs_battery_supply:dir search;
+allow platform_app vendor_sysfs_battery_supply:file { getattr open read }; 
+allow platform_app vendor_sysfs_kgsl:dir search;
+allow platform_app vendor_sysfs_kgsl:file { getattr open read };
