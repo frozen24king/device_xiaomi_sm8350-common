@@ -1,7 +1,6 @@
 /*
  * Copyright (C) 2015 The CyanogenMod Project
- *               2017-2020 The LineageOS Project
- *               2022-2023 VoidUI Project
+ *               2017-2023 The LineageOS Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -22,10 +21,16 @@ import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
+import android.os.IBinder;
 import android.util.Log;
+import android.view.SurfaceControl;
+import android.content.SharedPreferences;
+import android.os.SystemProperties;
 
 import org.lineageos.settings.dirac.DiracUtils;
 import org.lineageos.settings.refreshrate.RefreshUtils;
+import org.lineageos.settings.thermal.ThermalUtils;
+import org.lineageos.settings.utils.FileUtils;
 
 public class BootCompletedReceiver extends BroadcastReceiver {
 
@@ -34,13 +39,9 @@ public class BootCompletedReceiver extends BroadcastReceiver {
 
     @Override
     public void onReceive(final Context context, Intent intent) {
-        if (DEBUG)
-            Log.d(TAG, "Received boot completed intent");
-        try {
-            DiracUtils.getInstance(context);
-        } catch (Exception e) {
-            Log.d(TAG, "Dirac is not present in system");
-        }
+        if (DEBUG) Log.d(TAG, "Received boot completed intent");
+        DiracUtils.getInstance(context);
         RefreshUtils.startService(context);
+        ThermalUtils.startService(context);
     }
 }
