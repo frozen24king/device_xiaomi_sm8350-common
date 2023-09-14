@@ -232,6 +232,13 @@ debug.stagefright.omx_default_rank=0
 media.stagefright.thumbnail.prefer_hw_codecs=true
 ro.config.vc_call_vol_steps=11
 
+# Dolby Vision
+ro.vendor.audio.dolby.vision.support=true
+debug.config.media.video.dolby_vision_suports=true
+
+# HWC brightness
+ro.sf.force_hwc_brightness=1
+
 # NFC
 ro.vendor.nfc.repair=1
 ro.vendor.se.type=eSE,HCE,UICC
